@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+/* COLORS */
+:root {
+  --lightgray: #f8f9fe;
+  --white-opacity: #ffffff80;
+  --input: #eff1fd;
+  --lilac: #7f9fff;
+  --stronglilac: #3756b1;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* CARD PHOTO */
+.card-photo {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 250px;
+  height: 350px;
+  font-size: 25px;
+  transition: 450ms all;
+  transform-origin: center;
+  margin: 1.5rem;
+  box-shadow: 7px 8px 7px 2px rgba(214,214,214,1);
+}
+
+.card-img {
+  width: 100%;
+  height: 220px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.card-title {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px;
+  
+
+}
+
+.card-description {
+  font-size: 0.8rem;
+  padding: 10px;
+  color: gray;
+  margin: 0;
+  
+}
+
+/* CARD LIST */
+.card-list {
+  display: flex;
+  flex-flow: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* NEW PHOTO */
+h1 {
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+.new-photo {
+  background: var(--lightgray);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  width: 270px;
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--white-opacity);
+  box-shadow: 7px 8px 7px 2px rgba(214,214,214,1);
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+  background: var(--input);
+  margin-top: 5px;
+}
+
+.input-group {
+  padding: 7px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.7rem;
+  color: gray;
+}
+
+.button {
+  background: var(--lilac);
+  border: none;
+  font-size: 0.9rem;
+  padding: 10px 15px;
+  border-radius: 7px;
+  cursor: pointer;
   color: white;
 }
+.button.nav {
+  text-decoration: none;
+  margin: 10px;
+} 
 
-.App-link {
-  color: #61dafb;
+.button:hover {
+  background: var(--stronglilac);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper {
+  background: var(--lightgray);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
 }

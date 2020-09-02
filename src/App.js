@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import NewPhoto from './components/NewPhoto'
+import CardList from './components/CardList'
+import {BrowserRouter, Switch, Route} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+        <Switch>
+            <Route exact path='/photos' component = {CardList}/>
+            <Route exact path='/photos/create' component = {NewPhoto}/>
+            <Route exact path='/'>
+              <div className="wrapper">
+                <p>Esto es una prueba técnica para Clara</p>
+                <nav className="nav">
+                  <a className="button nav" href="/photos/create">New photo</a>
+                  <a className="button nav" href="/photos">Photos</a>
+                </nav>
+              </div>
+            </Route>
+
+        </Switch>
+    </BrowserRouter>
+    
+    </>
   );
 }
 
